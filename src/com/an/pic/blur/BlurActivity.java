@@ -36,6 +36,27 @@ public class BlurActivity extends Activity {
 								RSActivity.class));
 					}
 				});
+		findViewById(R.id.renderscript_method).setOnClickListener(
+				new OnClickListener() {
+
+					@Override
+					public void onClick(View arg0) {
+
+						startActivity(new Intent(BlurActivity.this,
+								RSActivity.class));
+					}
+				});
+		
+		findViewById(R.id.native_method).setOnClickListener(
+				new OnClickListener() {
+
+					@Override
+					public void onClick(View arg0) {
+
+						startActivity(new Intent(BlurActivity.this,
+								NativeBlurActivity.class));
+					}
+				});
 	}
 
 	@Override

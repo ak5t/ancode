@@ -9,6 +9,7 @@
     <string name="title_activity_gaosi">GaosiActivity</string>
     <string name="java_method">java_method</string>
     <string name="render_script_method">rs_method</string>
+    <string name="native_method">native_method</string>
     <string name="title_activity_rs">RSActivity</string>
     <string name="title_activity_blur">BlurActivity</string>
 

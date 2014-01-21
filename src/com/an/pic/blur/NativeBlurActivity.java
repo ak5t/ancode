@@ -1,5 +1,8 @@
 package com.an.pic.blur;
 
+import com.an.R;
+import com.an.pic.blur.util.StackBlurManager;
+
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -10,34 +13,31 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.an.R;
-import com.an.pic.blur.util.StackBlurManager;
-
-/**
- * 
- */
-public class GaosiActivity extends Activity {
-
-	private ImageView gaosiImage;
+public class NativeBlurActivity extends Activity {
+	
+	private ImageView gaosiImageView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_gaosi);
-		gaosiImage = (ImageView) findViewById(R.id.gaosi_bitmap);
+		setContentView(R.layout.activity_rs);
+		gaosiImageView = (ImageView)findViewById(R.id.gaosi_bitmap);
 	}
-
+	
 	public void onResume() {
 		super.onResume();
 		long timeStart = SystemClock.currentThreadTimeMillis();
 		Drawable image = getResources().getDrawable(R.drawable.jason_middle);
 		Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
 		StackBlurManager _stackBlurManager = new StackBlurManager(bitmap);
-		gaosiImage.setImageBitmap(_stackBlurManager.process(20));
-//		gaosiImage.setImageDrawable(ImageUtil.BoxBlurFilter(bitmap));
+		gaosiImageView.setImageBitmap(_stackBlurManager.processNatively(20));
 		long timeEnd = SystemClock.currentThreadTimeMillis();
 		Log.d("------------", timeEnd - timeStart+"ms");
 		Toast.makeText(getApplicationContext(), timeEnd - timeStart+"ms", Toast.LENGTH_SHORT).show();
 	}
+	
+	
+	
+	
 
 }

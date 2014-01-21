@@ -37,9 +37,13 @@
             android:name="com.an.pic.blur.RSActivity"
             android:label="@string/title_activity_rs" >
         </activity>
-                <activity
+        <activity
             android:name="com.an.pic.blur.BlurActivity"
             android:label="@string/title_activity_blur" >
+        </activity>
+         <activity
+            android:name="com.an.pic.blur.NativeBlurActivity"
+            android:label="@string/native_method" >
         </activity>
     </application>
 
