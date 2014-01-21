@@ -37,6 +37,27 @@ public class ImageUtil {
         rs.destroy();
         return outBitmap;
 	}
+	
+	
+	public static Bitmap blurBitmap(Context context,Bitmap inBitmap){
+		
+		RenderScript rsScript = RenderScript.create (context);
+		
+		Allocation inAlloc = Allocation.createFromBitmap (rsScript, inBitmap);
+
+		ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create (rsScript, Element.U8_4(rsScript));
+		blur.setRadius (20f);
+		blur.setInput (inAlloc);
+
+		Bitmap result = Bitmap.createBitmap (inBitmap.getWidth(), inBitmap.getHeight(), inBitmap.getConfig());
+		Allocation outAlloc = Allocation.createFromBitmap (rsScript, result);
+		blur.forEach (outAlloc);
+		outAlloc.copyTo (result);
+
+		rsScript.destroy ();
+		return result;
+	}
+	
 
 	public static Drawable BoxBlurFilter(Bitmap bmp) {
 		int width = bmp.getWidth();

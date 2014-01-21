@@ -1,3 +1,7 @@
 /gen
 /out
 /.idea
+/bin
+/.settings
+.classpath
+.project

@@ -28,7 +28,7 @@ public class RSActivity extends Activity {
 		long timeStart = SystemClock.currentThreadTimeMillis();
 		Drawable image = getResources().getDrawable(R.drawable.jason_middle);
 		Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-		gaosiImageView.setImageBitmap(ImageUtil.getRSBlurImage(getApplicationContext(), bitmap));
+		gaosiImageView.setImageBitmap(ImageUtil.blurBitmap(getApplicationContext(), bitmap));
 		long timeEnd = SystemClock.currentThreadTimeMillis();
 		Log.d("------------", timeEnd - timeStart+"ms");
 		Toast.makeText(getApplicationContext(), timeEnd - timeStart+"ms", Toast.LENGTH_SHORT).show();
