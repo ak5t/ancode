@@ -1,4 +1,4 @@
-[kyc total] (bnc://app.binance.com/webview/webview?type=default&url=aHR0cHM6Ly93d3cuYmluYW5jZS5jb20vZW4vbXkvc2V0dGluZ3MvcHJvZmlsZQ==&needLogin=true)
+[kyc total](bnc://app.binance.com/webview/webview?type=default&url=aHR0cHM6Ly93d3cuYmluYW5jZS5jb20vZW4vbXkvc2V0dGluZ3MvcHJvZmlsZQ==&needLogin=true)
 
 
 [Next Halftier ](bnc://app.binance.com/webview/webview?type=default&url=aHR0cHM6Ly93d3cuYmluYW5jZS5jb20vZW4vbXkvc2V0dGluZ3MvcHJvZmlsZT9yZXR1cm5Ubz1OQVRJVkUma3ljQml6TW9kZT1CQVNJQyZreWNfYml6U2NlbmU9T0NCUw==&needLogin=true)
@@ -12,4 +12,4 @@
 
 
 
-[arbitrary case-insensitive reference text]:   https://www.mozilla.org
+[kyc total](http://www.baidu.com)
