@@ -12,4 +12,4 @@
 
 
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[arbitrary case-insensitive reference text]:   https://www.mozilla.org
